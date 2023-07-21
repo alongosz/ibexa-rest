@@ -43,7 +43,9 @@ services:
 
     Ibexa\Bundle\Rest\RequestParser\Router:
         arguments:
-            - "@router"
+            $router: '@router'
+            $kernel: '@kernel'
+            $eventDispatcher: '@event_dispatcher'
 
     Ibexa\Rest\Input\ParserTools: ~
 

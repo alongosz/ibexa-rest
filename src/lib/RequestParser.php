@@ -16,7 +16,9 @@ interface RequestParser
      *
      * @param string $url
      *
-     * @return array
+     * @return array<mixed>
+     *
+     * @throws \Ibexa\Contracts\Core\Repository\Exceptions\InvalidArgumentException if a route was not found, or it was not a REST route
      */
     public function parse($url);
 
