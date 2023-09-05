@@ -89,6 +89,12 @@ services:
         tags:
             - {  name: ibexa.rest.output.value_object.visitor, type: Ibexa\Rest\Server\Exceptions\ContentFieldValidationException }
 
+    Ibexa\Rest\Server\Output\ValueObjectVisitor\Exception\ContentTypeFieldDefinitionValidationException:
+        parent: Ibexa\Rest\Server\Output\ValueObjectVisitor\BadRequestException
+        arguments: [ "%kernel.debug%", "@translator" ]
+        tags:
+            - { name: ibexa.rest.output.value_object.visitor, type: Ibexa\Rest\Server\Exceptions\ContentTypeFieldDefinitionValidationException }
+
     Ibexa\Rest\Server\Output\ValueObjectVisitor\ForbiddenException:
         parent: Ibexa\Contracts\Rest\Output\ValueObjectVisitor
         class: Ibexa\Rest\Server\Output\ValueObjectVisitor\ForbiddenException

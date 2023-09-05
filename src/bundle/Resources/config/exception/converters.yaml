@@ -9,3 +9,7 @@ services:
             tags: [ ibexa.rest.repository_exception.converter ]
 
     Ibexa\Rest\Exception\Converter\ContentFieldValidationExceptionConverter: ~
+
+    Ibexa\Rest\Exception\Converter\ContentTypeValidationExceptionConverter: ~
+
+    Ibexa\Rest\Exception\Converter\ContentTypeFieldDefinitionValidationExceptionConverter: ~

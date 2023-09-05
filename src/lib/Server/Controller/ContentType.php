@@ -306,10 +306,6 @@ class ContentType extends RestController
             );
         } catch (InvalidArgumentException $e) {
             throw new ForbiddenException(/** @Ignore */ $e->getMessage());
-        } catch (ContentTypeValidationException $e) {
-            throw new BadRequestException($e->getMessage());
-        } catch (ContentTypeFieldDefinitionValidationException $e) {
-            throw new BadRequestException($e->getMessage());
         } catch (Exceptions\Parser $e) {
             throw new BadRequestException($e->getMessage());
         }
